@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sridetch Pancharkan - Digital Infrastructure Leader Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Variables and Base Styles */
+        :root {
+            --primary-color: #007bff; /* Blue accent for EGAT/Tech feel */
+            --secondary-color: #212529; /* Dark text/background */
+            --background-color: #f8f9fa; /* Light background */
+            --text-color: #343a40;
+            --light-text: #ffffff;
+            --max-width: 1100px;
+            --font-family: 'Kanit', sans-serif;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+        }
+
+        /* Utilities */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: var(--primary-color);
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: var(--secondary-color);
+            color: var(--light-text);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li a {
+            color: var(--light-text);
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: var(--border-radius);
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Subtle gradient */
+            color: var(--secondary-color);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        #hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        #hero h2 {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        /* About Section */
+        #about {
+            padding: 80px 0;
+            background-color: var(--light-text);
+        }
+
+        .about-content {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .about-text, .about-details {
+            flex: 1;
+        }
+
+        .about-details h3 {
+            color: var(--primary-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .about-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .about-details li {
+            padding: 5px 0;
+            border-bottom: 1px dashed #ced4da;
+        }
+        
+        /* Skills/Expertise Section */
+        #skills {
+            padding: 80px 0;
+            background-color: #e9ecef;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background-color: var(--light-text);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-card h4 {
+            color: var(--primary-color);
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        
+        /* Projects Section */
+        #projects {
+            padding: 80px 0;
+            background-color: var(--light-text);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: #f1f3f5;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card-content {
+            padding: 20px;
+        }
+
+        .project-card h4 {
+            font-size: 1.5em;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--light-text);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--light-text);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* Hide navigation on mobile, usually replaced by a burger menu */
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">Sridetch Portfolio</div>
+            <ul>
+                <li><a href="#hero">หน้าแรก</a></li>
+                <li><a href="#about">ข้อมูลส่วนตัว</a></li>
+                <li><a href="#skills">ความเชี่ยวชาญ</a></li>
+                <li><a href="#projects">ผลงานเด่น</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <img src="placeholder_profile.jpg" alt="Profile Picture Placeholder" class="profile-pic"> 
+            <h1>ศรีเดช ปัญจขันธ์</h1>
+            <h2>หัวหน้ากองบริการดิจิทัลภาคเหนือ (กบดน-ห.) | ผู้นำด้านโครงสร้างพื้นฐานดิจิทัล</h2>
+            <p style="font-size: 1.1em; max-width: 600px; margin: 20px auto;">
+                ผู้มีประสบการณ์ด้านเทคโนโลยีและระบบสารสนเทศใน กฟผ. (EGAT) กว่า 25 ปี เชี่ยวชาญในการบริหารโครงสร้างพื้นฐานดิจิทัล การพัฒนางานวิจัย และการนำเทคโนโลยี AI/IIoT มาประยุกต์ใช้เพื่อเพิ่มประสิทธิภาพการดำเนินงานในเขตปฏิบัติการภาคเหนือ
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="about" class="container">
+        <h3 class="section-title">ข้อมูลส่วนตัวและประสบการณ์</h3>
+        <div class="about-content">
+            <div class="about-text">
+                <p style="margin-bottom: 20px;">
+                    ปัจจุบันดำรงตำแหน่ง **หัวหน้ากองบริการดิจิทัลภาคเหนือ (กบดน-ห.)** โดยมีหน้าที่หลักในการดูแลระบบเทคโนโลยีดิจิทัล และโครงสร้างพื้นฐาน IT (IT Infrastructure) ให้แก่หน่วยงานต่างๆ ในพื้นที่ 18 จังหวัดภาคเหนือ รวมถึงเขื่อนภูมิพล เขื่อนสิริกิติ์ และโรงไฟฟ้าแม่เมาะ
+                </p>
+                <p>
+                    นอกจากนี้ ยังให้ความสำคัญกับการแลกเปลี่ยนเรียนรู้ และการพัฒนาบุคลากรด้านเทคโนโลยีดิจิทัลอย่างต่อเนื่อง เพื่อให้เกิดการพัฒนาระบบงานที่มีประสิทธิภาพ สอดคล้องกับแนวโน้มเทคโนโลยีดิจิท
